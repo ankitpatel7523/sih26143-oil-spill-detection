@@ -1,0 +1,6 @@
+{
+  "name": "SIH26143: Oil Spill Detection & Vessel Attribution System",
+  "description": "Satellite SAR oil spill detection, backward hydrodynamic drift modeling, and AIS vessel attribution platform for NTRO.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

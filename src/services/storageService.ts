@@ -32,7 +32,7 @@ export const DEFAULT_SETTINGS: SystemSettings = {
   diffusionCoeffM2s: 10.0,
   iouThreshold: 0.80,
   oceanDataSource: 'oscar',
-  geminiApiKey: typeof process !== 'undefined' ? (process.env.GEMINI_API_KEY || '') : '',
+  geminiApiKey: (import.meta as any).env?.VITE_GEMINI_API_KEY || (typeof process !== 'undefined' ? (process.env?.GEMINI_API_KEY || '') : ''),
   autoAlertCoastGuard: true,
 };
 

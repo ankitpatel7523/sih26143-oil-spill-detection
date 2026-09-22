@@ -270,7 +270,7 @@ export async function analyzeSARWithGemini(
   apiKey?: string
 ): Promise<{ label: string; confidence: number; justification: string } | null> {
   const settings = StorageService.getSettings();
-  const key = apiKey || settings.geminiApiKey || (typeof process !== 'undefined' ? process.env.GEMINI_API_KEY : '');
+  const key = apiKey || settings.geminiApiKey || (import.meta as any).env?.VITE_GEMINI_API_KEY || (typeof process !== 'undefined' ? process.env?.GEMINI_API_KEY : '');
   if (!key || key === 'MY_GEMINI_API_KEY') return null;
 
   try {
